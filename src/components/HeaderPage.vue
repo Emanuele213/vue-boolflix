@@ -41,7 +41,7 @@ export default {
   background-color: black;
   height: 100px;
   .header-container {
-  max-width: 1200px;
+  max-width: 1220px;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -60,5 +60,16 @@ export default {
     text-align: center;;
   }
 }
+}
+@media screen and (max-width: 605px) {
+  .bg-header {
+    display: flex;
+    .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  }
 }
 </style>

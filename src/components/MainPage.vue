@@ -1,6 +1,6 @@
 <template>
   <main>
-    <MoviePage :arr-movie="arrMovies" />
+    <MoviePage :arr-movies="arrMovies" />
     <SeriesPage :arr-series="arrSeries" />
   </main>
 </template>

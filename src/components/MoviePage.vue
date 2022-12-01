@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="up-container">
     <h1>MOVIE</h1>
-    <div>
+    <div class="main-container">
       <PosterMovieSeries
         v-for="movie in arrMovies"
         :key="movie.id"
         :poster="`https://image.tmdb.org/t/p/w300${movie.poster_path}`"
-        :title-movie="movie.title"
+        :title="movie.title"
         :original-title="movie.original_title"
         :lang="movie.original_language"
         :average="movie.vote_average"
@@ -33,5 +33,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.up-container {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  .main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+}
+}
 
 </style>
