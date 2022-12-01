@@ -1,5 +1,8 @@
 <template>
-  <div class="up-container">
+  <div
+    v-if="arrSeries"
+    class="up-container"
+  >
     <h1>Serie</h1>
     <div class="main-container">
       <PosterMovieSeries
@@ -39,6 +42,12 @@ export default {
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
+  h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: yellow;
+    text-shadow: 1rem 0rem 3rem;
+  }
   .main-container {
   display: flex;
   flex-wrap: wrap;

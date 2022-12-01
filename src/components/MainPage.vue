@@ -26,5 +26,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+main {
+  background-image: url('@/assets/img/sfondo.jpg');
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
 </style>

@@ -1,9 +1,10 @@
 <template>
   <header class="bg-header">
     <div class="header-container">
-      <h1>
+      <!-- Ricarica la pagina -->
+      <button @click="reload()">
         BOOLFLIZ
-      </h1>
+      </button>
       <div>
         <form
           action=""
@@ -33,6 +34,11 @@ export default {
       searchString: '',
     };
   },
+  methods: {
+    reload() {
+      window.location.reload();
+    },
+  },
 };
 </script>
 
@@ -48,9 +54,12 @@ export default {
   justify-content: space-between;
   align-items: center;
 
-  h1 {
+  button {
     color: red;
     font-size: 3.5rem;
+    text-decoration: none;
+    background-color: black;
+    cursor: pointer;
   }
 
   input {
