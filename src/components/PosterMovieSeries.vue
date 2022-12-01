@@ -14,10 +14,16 @@
       <h3>
         Media voti:
         <span
-          v-for="index in newAverage"
+          v-for="index in (parseInt(average/2))"
           :key="index"
         >
           <font-awesome-icon icon="fa-solid fa-star" />
+        </span>
+        <span
+          v-for="i in (5 - parseInt(average / 2))"
+          :key="i"
+        >
+          <font-awesome-icon icon="fa-regular fa-star" />
         </span>
         {{ prova }}
       </h3>
@@ -38,7 +44,6 @@ export default {
     return {
       // variabile di prova
       prova: (this.average / 2),
-      newAverage: Math.floor(this.average / 2),
     };
   },
 };
