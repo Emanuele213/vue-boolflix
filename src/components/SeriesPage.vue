@@ -13,6 +13,7 @@
         :original-title="series.original_name"
         :lang="series.original_language"
         :average="series.vote_average"
+        :summary="series.overview"
       />
     </div>
   </div>

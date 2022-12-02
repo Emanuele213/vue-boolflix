@@ -42,7 +42,6 @@ export default {
         },
       }).then((axiosResponse) => {
         this.arrMovies = axiosResponse.data.results;
-        console.log(this.arrMovies);
       });
       // Serie
       axios.get(this.apiSeries, {
@@ -52,9 +51,7 @@ export default {
           language: this.lang,
         },
       }).then((axiosResponse) => {
-        console.log(axiosResponse);
         this.arrSeries = axiosResponse.data.results;
-        console.log(this.arrSeries);
       });
     },
   },
@@ -66,5 +63,26 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box
+}
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }
 </style>

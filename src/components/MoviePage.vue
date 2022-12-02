@@ -13,6 +13,7 @@
         :original-title="movie.original_title"
         :lang="movie.original_language"
         :average="movie.vote_average"
+        :summary="movie.overview"
       />
     </div>
   </div>
