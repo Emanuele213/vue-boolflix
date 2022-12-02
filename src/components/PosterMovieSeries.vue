@@ -57,8 +57,7 @@ export default {
   },
   data() {
     return {
-      // variabile di prova
-      newAverage: Math.ceil(this.average / 2),
+      newAverage: Math.round(this.average / 2),
     };
   },
 };
@@ -69,10 +68,15 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 300px;
+  width: 300px;
   position: relative;
   overflow: auto;
   overflow-x: hidden;
+  transition: width .2s;
+  animation:  rotateAnimation 1s linear;
+  &:hover{
+    width: 320px
+  }
   .img-poster {
     position: relative;
   }
@@ -80,19 +84,18 @@ export default {
   width: 300px;
   height: 400px;
   border: 5px solid yellow;
-  border-radius: 1rem;
+  border-radius: 2rem;
   }
 .poster-absolute{
   position: absolute;
   z-index: 2;
   display: none;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background-color: black;
   height: 400px;
     h3 {
-      color: purple;
+      color: white;
       padding: .5rem 1rem;
-      opacity: 1;
       width: 300px;
     }
   }
@@ -100,11 +103,16 @@ export default {
 .scroll-summary {
   overflow-y: auto;
   h4 {
-      color: purple;
+      color: white;
       padding: .5rem 1rem;
-      opacity: 1;
       width: 300px;
     }
+}
+
+@keyframes rotateAnimation {
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 .poster-container  .img-poster:hover {
   z-index: 2;
@@ -112,7 +120,7 @@ export default {
 .poster-container:hover .poster-absolute {
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 /* width */
@@ -128,7 +136,7 @@ export default {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: red;
+  background: yellow;
   border-radius: 10px;
 }
 
