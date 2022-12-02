@@ -2,8 +2,14 @@
   <div class="poster-container">
     <div class="img-poster">
       <img
+        v-if="poster"
         class="img-size"
         :src="poster"
+        :alt="title"
+      >
+      <img
+        v-else
+        src="@/assets/img/not-found.png"
         :alt="title"
       >
     </div>
@@ -14,13 +20,13 @@
       <h3>
         Media voti:
         <span
-          v-for="index in (parseInt(average/2))"
+          v-for="index in (newAverage)"
           :key="index"
         >
           <font-awesome-icon icon="fa-solid fa-star" />
         </span>
         <span
-          v-for="star in (5 - parseInt(prova))"
+          v-for="star in (5 -(newAverage))"
           :key="(star + 3)"
         >
           <font-awesome-icon icon="fa-regular fa-star" />
@@ -52,7 +58,7 @@ export default {
   data() {
     return {
       // variabile di prova
-      prova: (this.average / 2),
+      newAverage: Math.ceil(this.average / 2),
     };
   },
 };
