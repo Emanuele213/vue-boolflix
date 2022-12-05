@@ -57,5 +57,4 @@ export default {
   gap: .5rem;
 }
 }
-
 </style>

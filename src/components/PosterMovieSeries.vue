@@ -31,7 +31,6 @@
         >
           <font-awesome-icon icon="fa-regular fa-star" />
         </span>
-        {{ prova }}
       </h3>
       <div class="scroll-summary">
         <h4>{{ summary }}</h4>
