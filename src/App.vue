@@ -66,14 +66,14 @@ export default {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 11px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px grey;
+//   border-radius: 10px;
+// }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
